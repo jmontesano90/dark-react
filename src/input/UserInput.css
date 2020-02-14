@@ -1,0 +1,8 @@
+.input{
+    margin-top: 8px;
+    color: white;
+    height: 150px;
+    width: 65px;
+    display: flex;
+    flex-direction: column;
+  }
