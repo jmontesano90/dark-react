@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
+import './InputBox.css'
 
 
 class InputBox extends Component {
     render(){
         return(
-            <div>
-                    <div className="input">
+                    <div>
                         <label htmlFor="black" className="black">Black</label>
                         <input type="text" name="black" id="black" placeholder="0"/>
      
@@ -23,7 +23,6 @@ class InputBox extends Component {
 
    
                     </div>
-            </div>
         )
     }
 }

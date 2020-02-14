@@ -1,0 +1,6 @@
+.color{
+    margin-top: 8px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+  }
