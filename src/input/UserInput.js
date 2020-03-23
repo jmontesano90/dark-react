@@ -7,8 +7,8 @@ class UserInput extends Component {
     render(){
         return(
             <div className ="input">
-                <InputBox />
-                <NameBox />
+                <InputBox handleChange={this.props.handleChange}/>
+                <NameBox handleChange={this.props.handleChange}/>
             </div>
         )
     }

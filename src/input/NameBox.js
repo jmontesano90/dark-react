@@ -6,7 +6,7 @@ class NameBox extends Component {
         return(
             <div className="nameOfRoll">
                     <label htmlFor="nameOfRoll">Name of the roll?
-                        <input type="text" name = "nameOfRoll" id = "nameOfRoll" placeholder = "Spear. Sword, Armor dodge rolls etc"/>
+                        <input type="text" name = "nameOfRoll" id = "nameOfRoll" placeholder = "Spear. Sword, Armor dodge rolls etc" onChange={e => this.props.handleChange(e)}/>
                     </label>
             </div>
         )
