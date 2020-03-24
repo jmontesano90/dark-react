@@ -1,33 +1,33 @@
 import React, { Component } from "react";
 //import './App.css';
 import UserInput from "./input/UserInput";
+import ResultContext from "./ResultContext";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      black: 0,
-      blue: 0,
-      orange: 0,
-      modifier: 0,
-      desiredRoll: 0,
-      nameOfRoll: null
+      results: []
     };
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
+  handleAddResult = result => {
+    this.state.results.push(result);
     this.setState({
-      [event.target.name]: event.target.value
+      results: this.state.results
     });
-    console.log(event.target.name, event.target.value);
-  }
+    console.log("Current results: ", this.state.results);
+  };
 
   render() {
+    const value = {
+      results: this.state.results,
+      addResult: this.handleAddResult
+    };
     return (
-      <div>
-        <UserInput handleChange={this.handleChange} />
-      </div>
+      <ResultContext.Provider value={value}>
+        <UserInput />
+      </ResultContext.Provider>
     );
   }
 }

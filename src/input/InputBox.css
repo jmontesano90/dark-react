@@ -1,4 +1,4 @@
-h2{
+h2 {
   margin-left: auto;
   margin-right: auto;
   margin-top: 8px;
@@ -8,41 +8,49 @@ h2{
   justify-content: center;
 }
 
-.colors{
-    margin-top: 8px;
-    color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+.colors {
+  margin-top: 8px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
-  .additionalInput{
-    margin-top: 8px;
-    color: rgb(204, 43, 43);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+.additionalInput {
+  margin-top: 8px;
+  color: rgb(204, 43, 43);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
-  #black::placeholder{
-    color: black;
-    opacity: 1;
-  }
+#black::placeholder {
+  color: black;
+  opacity: 1;
+}
 
-  #blue::placeholder{
-    color: blue;
-    font-size: 20;
-    opacity: 1;
-  }
+#blue::placeholder {
+  color: blue;
+  font-size: 20;
+  opacity: 1;
+}
 
-  #orange::placeholder{
-    color: orange;
-    opacity: 1;
-  }
-  .colorInput{
-    width:8px;
-  }
+#orange::placeholder {
+  color: orange;
+  opacity: 1;
+}
+.colorInput {
+  width: 8px;
+}
 
-  .otherInput{
-    width: 10px;
-  }
+.otherInput {
+  width: 10px;
+}
+
+.nameOfRoll {
+  margin-top: 8px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
