@@ -32,7 +32,7 @@ class UserInput extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    // console.log("I was clicked", this.state.result);
+    console.log("I was clicked", this.state.result);
   }
   render() {
     return (

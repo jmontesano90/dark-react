@@ -1,7 +1,10 @@
 import React, { Component } from "react";
-//import './App.css';
+import "./App.css";
 import UserInput from "./input/UserInput";
 import ResultContext from "./ResultContext";
+import InputBox from "./input/InputBox";
+import Results from "./results/Results";
+import { calculateStats } from "./calculations";
 
 class App extends Component {
   constructor(props) {
@@ -26,7 +29,11 @@ class App extends Component {
     };
     return (
       <ResultContext.Provider value={value}>
-        <UserInput />
+        <main>
+          <InputBox />
+          <Results />
+          <Results />
+        </main>
       </ResultContext.Provider>
     );
   }
