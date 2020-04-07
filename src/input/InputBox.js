@@ -8,42 +8,40 @@ class InputBox extends Component {
     this.state = {
       result: {
         black: {
-          value: "",
-          touched: false
+          value: "0",
+          touched: false,
         },
         blue: {
-          value: "",
-          touched: false
+          value: "0",
+          touched: false,
         },
         orange: {
-          value: "",
-          touched: false
+          value: "0",
+          touched: false,
         },
         modifier: {
-          value: "",
-          touched: false
+          value: "0",
+          touched: false,
         },
         desiredRoll: {
-          value: "",
-          touched: false
+          value: "0",
+          touched: false,
         },
-        nameOfRoll: null
-      }
+        nameOfRoll: "",
+      },
     };
     this.handleChange = this.handleChange.bind(this);
   }
-
-  // static contextType = ResultContext;
 
   handleChange(event) {
     let result = { ...this.state.result };
     result[event.target.name.toString()] = {
       value: event.target.value,
-      touched: true
+      touched: true,
     };
     this.setState(
       {
-        result
+        result,
       },
       () => {
         //console.log(this.state.result);
@@ -56,14 +54,45 @@ class InputBox extends Component {
   handleSubmit(event) {
     event.preventDefault();
     this.context.addResult(this.state.result);
-    console.log("I was clicked", this.state.result);
+    console.log("State in input box", this.state.result);
+    this.setState({
+      result: {
+        black: {
+          value: "0",
+          touched: false,
+        },
+        blue: {
+          value: "0",
+          touched: false,
+        },
+        orange: {
+          value: "0",
+          touched: false,
+        },
+        modifier: {
+          value: "0",
+          touched: false,
+        },
+        desiredRoll: {
+          value: "0",
+          touched: false,
+        },
+        nameOfRoll: "",
+      },
+    });
+    document.getElementById("black").value = "";
+    document.getElementById("blue").value = "";
+    document.getElementById("orange").value = "";
+    document.getElementById("modifier").value = "";
+    document.getElementById("desiredRoll").value = "";
+    document.getElementById("nameOfRoll").value = "";
   }
   rend;
 
   render() {
     return (
       <div className="inputForm">
-        <form className="newResult" onSubmit={e => this.handleSubmit(e)}>
+        <form className="newResult" onSubmit={(e) => this.handleSubmit(e)}>
           <h2>Dice being rolled</h2>
           <div className="colors">
             <label htmlFor="black" className="black color">
@@ -75,7 +104,7 @@ class InputBox extends Component {
               name="black"
               id="black"
               placeholder="0"
-              onChange={e => this.handleChange(e)}
+              onChange={(e) => this.handleChange(e)}
             />
 
             <label htmlFor="blue" className="blue color">
@@ -87,7 +116,7 @@ class InputBox extends Component {
               name="blue"
               id="blue"
               placeholder="0"
-              onChange={e => this.handleChange(e)}
+              onChange={(e) => this.handleChange(e)}
             />
 
             <label htmlFor="orange" className="orange color">
@@ -99,7 +128,7 @@ class InputBox extends Component {
               name="orange"
               id="orange"
               placeholder="0"
-              onChange={e => this.handleChange(e)}
+              onChange={(e) => this.handleChange(e)}
             />
           </div>
 
@@ -113,7 +142,7 @@ class InputBox extends Component {
               name="modifier"
               id="modifier"
               placeholder="0"
-              onChange={e => this.handleChange(e)}
+              onChange={(e) => this.handleChange(e)}
             />
 
             <label htmlFor="desiredRoll" className="additional">
@@ -125,7 +154,7 @@ class InputBox extends Component {
               name="desiredRoll"
               id="desiredRoll"
               placeholder="0"
-              onChange={e => this.handleChange(e)}
+              onChange={(e) => this.handleChange(e)}
             />
           </div>
           <div className="bottomInput">
@@ -135,7 +164,7 @@ class InputBox extends Component {
                 name="nameOfRoll"
                 id="nameOfRoll"
                 placeholder="Name of Roll"
-                onChange={e => this.handleChange(e)}
+                onChange={(e) => this.handleChange(e)}
               />
             </label>
             <button type="submit" className="rollButton">

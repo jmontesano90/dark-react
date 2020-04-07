@@ -1,3 +1,27 @@
 .results {
   margin: 25px 35%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(31, 31, 31);
+}
+
+h3 {
+  color: rgb(233, 233, 233);
+  margin: 10px 35%;
+}
+
+.title {
+  color: rgb(233, 233, 233);
+}
+
+.calculation {
+  color: rgb(189, 26, 26);
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+  padding: 3px;
+}
+.result {
+  margin: 20px;
+  font-size: 20px;
 }

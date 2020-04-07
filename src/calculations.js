@@ -12,15 +12,18 @@ function diceRoll() {
 
 function simulateRolls(black, blue, orange, modifier) {
   let blackTotal = 0;
+  let i = 0;
   for (i = 0; i !== black; i++) {
     blackTotal += blackDice[diceRoll()];
   }
   let blueTotal = 0;
-  for (i = 0; i !== blue; i++) {
+  let j = 0;
+  for (j = 0; j !== blue; j++) {
     blueTotal += blueDice[diceRoll()];
   }
   let orangeTotal = 0;
-  for (i = 0; i !== orange; i++) {
+  let k = 0;
+  for (k = 0; k !== orange; k++) {
     orangeTotal += orangeDice[diceRoll()];
   }
 
@@ -29,14 +32,15 @@ function simulateRolls(black, blue, orange, modifier) {
 
 function average(rolls) {
   let averageRoll = 0;
+  let i = 0;
   for (i = 0; i < rolls.length; i++) {
     averageRoll += rolls[i];
   }
-  averageRoll = averageRoll / rolls.length;
+  return averageRoll / rolls.length;
 }
 
 function median(rolls) {
-  rolls.sort(function(a, b) {
+  rolls.sort(function (a, b) {
     return a - b;
   });
   return rolls[rolls.length / 2];
@@ -54,16 +58,22 @@ function variance(rolls, average) {
 }
 
 function percentRoll(rolls, desiredRoll) {
-  rolls.sort(function(a, b) {
-    return a - b;
-  });
-  for (i = 0; desiredRoll != rolls[i] && i < rolls.length; i++) {}
-  return (rolls.length - i) / 50;
+  if (desiredRoll == 0) {
+    return false;
+  } else {
+    rolls.sort(function (a, b) {
+      return a - b;
+    });
+    let i = 0;
+    for (i = 0; desiredRoll !== rolls[i] && i < rolls.length; i++) {}
+    return (rolls.length - i) / 50;
+  }
 }
 
 function mode(rolls) {
   const numberCounts = [];
 
+  let i = 0;
   for (i = 0; i < rolls.length; i++) {
     let y = 0;
     while (y < numberCounts.length) {
@@ -77,11 +87,11 @@ function mode(rolls) {
     if (y == numberCounts.length) {
       numberCounts.push({
         number: rolls[i],
-        numberCount: 1
+        numberCount: 1,
       });
     } // if this roll was not added previously, it will be added here.  If y == numberCounts.length that means it went all the way to the end of the array and did not add it, meaning we have to add it.
   }
-  numberCounts.sort(function(a, b) {
+  numberCounts.sort(function (a, b) {
     return b.numberCount - a.numberCount;
   });
   return numberCounts[0].number;
@@ -89,6 +99,7 @@ function mode(rolls) {
 
 export function calculateStats(black, blue, orange, modifier, desiredRoll) {
   let cumulativeRolls = [];
+  let i = 0;
   for (i = 0; i < 5000; i++) {
     cumulativeRolls.push(simulateRolls(black, blue, orange, modifier));
   }
@@ -100,7 +111,7 @@ export function calculateStats(black, blue, orange, modifier, desiredRoll) {
     median: median(cumulativeRolls),
     variance: variance(cumulativeRolls, mean),
     percentRoll: percentRoll(cumulativeRolls, desiredRoll),
-    mode: mode(cumulativeRolls)
+    mode: mode(cumulativeRolls),
   };
 
   return calculations;
