@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import UserInput from "./input/UserInput";
 import ResultContext from "./ResultContext";
 import InputBox from "./input/InputBox";
 import Results from "./results/Results";
@@ -28,14 +27,12 @@ class App extends Component {
     this.setState({
       results: this.state.results,
     });
-    console.log(this.state.results);
+    //console.log(this.state.results);
   };
 
   handleDeleteResult = (id) => {
     let temp = this.state.results;
-    console.log("temp pre slice", temp, "id:", id);
-    temp.slice(id, 1);
-    console.log("temp post slice", temp);
+    temp.splice(id, 1);
     this.setState({
       results: temp,
     });
@@ -50,6 +47,7 @@ class App extends Component {
     return (
       <ResultContext.Provider value={value}>
         <main>
+          <h1>Dark Rolls</h1>
           <InputBox />
           {this.state.results.map((result, index) => (
             <Results results={result} key={index} id={index} />

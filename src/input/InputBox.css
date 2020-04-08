@@ -1,9 +1,9 @@
 .inputForm {
   border: 1px solid gray;
   border-radius: 5px;
-  margin-top: 200px;
-  margin-left: 35%;
-  margin-right: 35%;
+  margin-top: 90px;
+  margin-left: 15%;
+  margin-right: 15%;
   padding: 10px;
   background-color: rgb(31, 31, 31);
 }
@@ -42,7 +42,8 @@ h2 {
 
 .additionalInput {
   margin-top: 20px;
-  color: rgb(138, 66, 66);
+  padding: 4px;
+  color: rgb(255, 255, 255);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -51,8 +52,7 @@ h2 {
 }
 
 .rollButton {
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 20%;
   margin-top: 15px;
 }
 #nameOfRoll {
@@ -75,26 +75,16 @@ h2 {
   color: rgba(116, 116, 116, 0.856);
 }
 
-/* #blue::placeholder {
-  color: blue;
-  font-size: 20;
-  opacity: 1;
-} */
-
 .blue {
   color: rgba(128, 128, 255, 0.938);
 }
-
-/* #orange::placeholder {
-  color: orange;
-  opacity: 1;
-} */
 
 .orange {
   color: rgba(255, 180, 41, 0.877);
 }
 .colorInput {
   width: 12px;
+  margin-left: 3px;
   font-size: 20px;
   border-radius: 5px;
 }
@@ -103,6 +93,14 @@ h2 {
   width: 12px;
   font-size: 20px;
   border-radius: 5px;
+  margin-left: 3px;
+}
+
+.modifier {
+  width: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-left: 3px;
 }
 
 .nameOfRoll {
@@ -111,4 +109,13 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.error {
+  border-bottom: 4px black solid;
+  border-radius: 5px;
+  color: rgb(255, 0, 0);
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 10px;
 }

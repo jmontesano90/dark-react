@@ -1,4 +1,10 @@
 body {
-  background-color: rgb(50, 50, 50);
+  background-color: rgb(26, 26, 26);
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+  color: white;
+  margin: 100px 32%;
+  font-size: 35px;
 }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ResultContext from "../ResultContext";
 import "./InputBox.css";
+import ValidationError from "./ValidationError";
 
 class InputBox extends Component {
   constructor(props) {
@@ -47,6 +48,52 @@ class InputBox extends Component {
         //console.log(this.state.result);
       }
     );
+  }
+
+  validateDice() {
+    if (
+      this.state.result.black.touched === false &&
+      this.state.result.blue.touched === false &&
+      this.state.result.orange.touched === false
+    ) {
+      return "At least one dice must be selected";
+    } else {
+      return "";
+    }
+  }
+
+  validateNumberInputs() {
+    let onlyNumbers = true;
+    if (isNaN(this.state.result.black.value)) {
+      onlyNumbers = false;
+    }
+    if (isNaN(this.state.result.blue.value)) {
+      onlyNumbers = false;
+    }
+    if (isNaN(this.state.result.orange.value)) {
+      onlyNumbers = false;
+    }
+    if (isNaN(this.state.result.modifier.value)) {
+      onlyNumbers = false;
+    }
+    if (isNaN(this.state.result.desiredRoll.value)) {
+      onlyNumbers = false;
+    }
+    if (onlyNumbers === false) {
+      return "All inputs must be numbers";
+    }
+  }
+
+  additionalDiceValidation() {
+    let validation = false;
+    if (this.state.result.modifier.touched === true) {
+      validation = true;
+    } else if (this.state.result.desiredRoll.touched === true) {
+      validation = true;
+    } else if (this.state.result.nameOfRoll.touched === true) {
+      validation = true;
+    }
+    return validation;
   }
 
   static contextType = ResultContext;
@@ -137,7 +184,7 @@ class InputBox extends Component {
               Modifier:
             </label>
             <input
-              className="otherInput"
+              className="modifier"
               type="text"
               name="modifier"
               id="modifier"
@@ -167,9 +214,19 @@ class InputBox extends Component {
                 onChange={(e) => this.handleChange(e)}
               />
             </label>
-            <button type="submit" className="rollButton">
-              Roll!
-            </button>
+            <ValidationError message={this.validateNumberInputs()} />
+            {this.additionalDiceValidation() && (
+              <ValidationError message={this.validateDice()} />
+            )}
+            <input
+              type="image"
+              src="https://imgur.com/fFV9HS6.png"
+              alt="initialzie button"
+              className="rollButton"
+              width="224"
+              height="29"
+              disabled={this.validateNumberInputs() || this.validateDice()}
+            />
           </div>
         </form>
       </div>

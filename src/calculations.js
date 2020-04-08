@@ -58,7 +58,7 @@ function variance(rolls, average) {
 }
 
 function percentRoll(rolls, desiredRoll) {
-  if (desiredRoll == 0) {
+  if (desiredRoll === 0) {
     return false;
   } else {
     rolls.sort(function (a, b) {
@@ -77,14 +77,14 @@ function mode(rolls) {
   for (i = 0; i < rolls.length; i++) {
     let y = 0;
     while (y < numberCounts.length) {
-      if (numberCounts[y].number == rolls[i]) {
+      if (numberCounts[y].number === rolls[i]) {
         numberCounts[y].numberCount += 1;
         break;
         //check numberCounts to see if this roll has already been seen before, if it has increment the numberCount, break out of the loop
       }
       y++;
     }
-    if (y == numberCounts.length) {
+    if (y === numberCounts.length) {
       numberCounts.push({
         number: rolls[i],
         numberCount: 1,
