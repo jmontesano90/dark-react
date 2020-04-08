@@ -26,12 +26,10 @@ class App extends Component {
       parseInt(result.desiredRoll.value)
     );
     math.rollInfo = result;
-    console.log("From handleAddResult", math);
     this.state.results.unshift(math);
     this.setState({
       results: this.state.results,
     });
-    //console.log(this.state.results);
   };
 
   handleDeleteResult = (id) => {
@@ -56,7 +54,6 @@ class App extends Component {
           <Route exact path="/dark-react/" component={InputBox} />
           <Route exact path="/dark-react/what" component={What} />
           <Route exact path="/dark-react/how" component={How} />
-          {/* <InputBox /> */}
           {this.state.results.map((result, index) => (
             <Results results={result} key={index} id={index} />
           ))}

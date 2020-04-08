@@ -11,7 +11,6 @@ class Results extends Component {
   static contextType = ResultContext;
 
   render() {
-    console.log(this.props.id);
     let plus;
     if (this.props.results.rollInfo.modifier.value < 0) {
       plus = "";

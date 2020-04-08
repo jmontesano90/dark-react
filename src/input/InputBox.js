@@ -44,9 +44,7 @@ class InputBox extends Component {
       {
         result,
       },
-      () => {
-        //console.log(this.state.result);
-      }
+      () => {}
     );
   }
 
@@ -101,7 +99,6 @@ class InputBox extends Component {
   handleSubmit(event) {
     event.preventDefault();
     this.context.addResult(this.state.result);
-    console.log("State in input box", this.state.result);
     this.setState({
       result: {
         black: {
