@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e3c14ad31e342282484f943012358a90",
+    "revision": "61f2517f6f50af79ccbfd380b46f9985",
     "url": "/dark-react/index.html"
   },
   {
-    "revision": "dfccf33e8f0bb98b14c7",
+    "revision": "6593cfb6319a6dfe99bc",
     "url": "/dark-react/static/css/main.9719fd06.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dark-react/static/js/2.5aa37430.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dfccf33e8f0bb98b14c7",
-    "url": "/dark-react/static/js/main.352e3484.chunk.js"
+    "revision": "6593cfb6319a6dfe99bc",
+    "url": "/dark-react/static/js/main.10fa39c6.chunk.js"
   },
   {
     "revision": "a83c547ce6978d740364",
