@@ -4,6 +4,10 @@ import ResultContext from "./ResultContext";
 import InputBox from "./input/InputBox";
 import Results from "./results/Results";
 import { calculateStats } from "./calculations";
+import Nav from "./Nav";
+import What from "./additionalInfo/What";
+import How from "./additionalInfo/How";
+import { Route } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -47,8 +51,12 @@ class App extends Component {
     return (
       <ResultContext.Provider value={value}>
         <main>
+          <Nav />
           <h1>Dark Rolls</h1>
-          <InputBox />
+          <Route exact path="/" component={InputBox} />
+          <Route exact path="/what" component={What} />
+          <Route exact path="/how" component={How} />
+          {/* <InputBox /> */}
           {this.state.results.map((result, index) => (
             <Results results={result} key={index} id={index} />
           ))}
