@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/dark-react/static/css/main.b0a21f99.chunk.css",
-    "main.js": "/dark-react/static/js/main.10fa39c6.chunk.js",
-    "main.js.map": "/dark-react/static/js/main.10fa39c6.chunk.js.map",
+    "main.js": "/dark-react/static/js/main.935d218e.chunk.js",
+    "main.js.map": "/dark-react/static/js/main.935d218e.chunk.js.map",
     "runtime-main.js": "/dark-react/static/js/runtime-main.16d9be1c.js",
     "runtime-main.js.map": "/dark-react/static/js/runtime-main.16d9be1c.js.map",
     "static/js/2.5aa37430.chunk.js": "/dark-react/static/js/2.5aa37430.chunk.js",
     "static/js/2.5aa37430.chunk.js.map": "/dark-react/static/js/2.5aa37430.chunk.js.map",
     "index.html": "/dark-react/index.html",
-    "precache-manifest.980013f534038daeb77fba6b280d07bc.js": "/dark-react/precache-manifest.980013f534038daeb77fba6b280d07bc.js",
+    "precache-manifest.f9de648cb6e8b07a202b27b1353b4222.js": "/dark-react/precache-manifest.f9de648cb6e8b07a202b27b1353b4222.js",
     "service-worker.js": "/dark-react/service-worker.js",
     "static/css/main.b0a21f99.chunk.css.map": "/dark-react/static/css/main.b0a21f99.chunk.css.map",
     "static/js/2.5aa37430.chunk.js.LICENSE.txt": "/dark-react/static/js/2.5aa37430.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.16d9be1c.js",
     "static/js/2.5aa37430.chunk.js",
     "static/css/main.b0a21f99.chunk.css",
-    "static/js/main.10fa39c6.chunk.js"
+    "static/js/main.935d218e.chunk.js"
   ]
 }
