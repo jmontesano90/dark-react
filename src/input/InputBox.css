@@ -32,12 +32,12 @@ h2 {
 
 .color {
   margin-left: 10px;
-  font-size: 23px;
+  font-size: 16px;
 }
 
 .additional {
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .additionalInput {
@@ -52,24 +52,18 @@ h2 {
 }
 
 .rollButton {
-  margin-left: 20%;
-  margin-top: 15px;
+  width: 224px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
-#nameOfRoll {
-  margin-left: 28%;
-  margin-right: 0%;
-}
+
 .bottomInput {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
 }
-
-/* #black::placeholder {
-  color: black;
-  opacity: 1;
-} */
 
 .black {
   color: rgba(116, 116, 116, 0.856);
@@ -85,37 +79,51 @@ h2 {
 .colorInput {
   width: 12px;
   margin-left: 3px;
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 5px;
 }
 
 .otherInput {
   width: 12px;
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 5px;
   margin-left: 3px;
 }
 
 .modifier {
-  width: 20px;
-  font-size: 20px;
+  width: 16px;
+  font-size: 16px;
   border-radius: 5px;
   margin-left: 3px;
 }
 
-.nameOfRoll {
-  margin-top: 8px;
+#nameOfRoll {
   color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  border-radius: 5px;
+  width: 150px;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .error {
-  border-bottom: 4px black solid;
+  margin-top: 10px;
+  border: 4px black solid;
   border-radius: 5px;
   color: rgb(255, 0, 0);
-  margin-left: 15%;
-  margin-right: 15%;
   padding: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .inputForm {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .inputForm {
+    margin-left: 35%;
+    margin-right: 35%;
+  }
 }

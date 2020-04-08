@@ -58,3 +58,17 @@ h3 {
 .orange {
   color: rgba(255, 180, 41, 0.877);
 }
+
+@media screen and (min-width: 600px) {
+  .results {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .results {
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+}

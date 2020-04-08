@@ -27,7 +27,7 @@ class App extends Component {
     );
     math.rollInfo = result;
     console.log("From handleAddResult", math);
-    this.state.results.push(math);
+    this.state.results.unshift(math);
     this.setState({
       results: this.state.results,
     });

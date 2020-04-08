@@ -4,7 +4,7 @@ import "./additional.css";
 class How extends Component {
   render() {
     return (
-      <div className="additional">
+      <div className="navInfo">
         <h2>What is this?</h2>
         <p>
           Dark Rolls is meant to be used in conjunction with the Dark Souls

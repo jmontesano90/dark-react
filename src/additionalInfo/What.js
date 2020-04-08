@@ -4,7 +4,7 @@ import "./additional.css";
 class Nav extends Component {
   render() {
     return (
-      <div>
+      <div className="navInfo">
         <h2>How does this work?</h2>
         <p>
           Dark Rolls simulates 5000 rolls based on the amount of die you
