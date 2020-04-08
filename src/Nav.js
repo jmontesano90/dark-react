@@ -8,13 +8,13 @@ class Nav extends Component {
       <header>
         <ul>
           <li className="Home">
-            <Link to="/">Home</Link>
+            <Link to="/dark-react/">Home</Link>
           </li>
           <li className="what">
-            <Link to="/what">What is this?</Link>
+            <Link to="/dark-react/what">What is this?</Link>
           </li>
           <li className="how">
-            <Link to="/how">How does this work?</Link>
+            <Link to="/dark-react/how">How does this work?</Link>
           </li>
         </ul>
       </header>

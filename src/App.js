@@ -53,9 +53,9 @@ class App extends Component {
         <main>
           <Nav />
           <h1>Dark Rolls</h1>
-          <Route exact path="/" component={InputBox} />
-          <Route exact path="/what" component={What} />
-          <Route exact path="/how" component={How} />
+          <Route exact path="/dark-react/" component={InputBox} />
+          <Route exact path="/dark-react/what" component={What} />
+          <Route exact path="/dark-react/how" component={How} />
           {/* <InputBox /> */}
           {this.state.results.map((result, index) => (
             <Results results={result} key={index} id={index} />
